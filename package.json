@@ -1,0 +1,13 @@
+{
+  "name": "dsh-plugin-dev-kit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Manifest/patch validation for the kit's templates and examples; CI runs it.",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

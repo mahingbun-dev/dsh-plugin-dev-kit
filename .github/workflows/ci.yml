@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm run validate
+      - name: Syntax-check entry modules
+        run: |
+          node --check examples/dice-tool/index.js
+          node --check examples/dice-tool/dice.js
+          node --check skills/dsh-plugin-dev/templates/tool-plugin/index.js
+          node --check skills/dsh-plugin-dev/templates/wrap-existing/index.js
+          node --check skills/dsh-plugin-dev/templates/ui-plugin/index.js
+          node --check skills/dsh-plugin-dev/templates/ui-plugin/client.js
+      - name: Example standalone tests
+        run: |
+          cd examples/dice-tool
+          node --test
