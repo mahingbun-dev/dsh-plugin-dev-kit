@@ -1,0 +1,10 @@
+# Configuration-only bundle: mounts dsh-mcp-client with your server's settings.
+# 纯配置 bundle：把 dsh-mcp-client 连同你的服务器配置挂进 profile。
+- insert:
+    - id: demo-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: demo
+        transport: streamable-http
+        url: http://127.0.0.1:3000/mcp
+        failOnStartupError: true

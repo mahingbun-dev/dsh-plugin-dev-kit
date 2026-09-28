@@ -1,0 +1,5 @@
+# One row per plugin your package provides. `name` must equal the package name
+# (how Node resolves the installed code); `id` must be unique in the profile.
+- insert:
+    - id: my-tool
+      name: '@local/my-tool'

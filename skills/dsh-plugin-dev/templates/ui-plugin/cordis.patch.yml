@@ -1,0 +1,5 @@
+# Host half: one row mounting this package's plugin.
+# Host 半：一行挂载本包的插件。
+- insert:
+    - id: my-decoration
+      name: '@local/my-decoration'

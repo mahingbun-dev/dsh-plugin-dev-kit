@@ -1,0 +1,5 @@
+# Mount the bridge plugin; defaults in Config work against localhost.
+# 挂载桥接插件；Config 默认值对 localhost 可用。
+- insert:
+    - id: my-app-bridge
+      name: '@local/my-app-bridge'
