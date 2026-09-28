@@ -1,5 +1,7 @@
 # dsh-plugin-dev-kit
 
+<p align="center"><img src=".github/assets/social-preview.png" alt="dsh-plugin-dev-kit — build DeepSeek Harness plugins with any AI coding agent" width="100%"></p>
+
 **Skills, templates, and recipes that teach any AI coding agent to build [DeepSeek Harness (dsh)](https://github.com/deepseek-ai/deepseek-harness) plugins — fast, correctly, and without fighting the framework.**
 
 English | [中文](README.zh.md)

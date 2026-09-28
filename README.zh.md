@@ -1,5 +1,7 @@
 # dsh-plugin-dev-kit
 
+<p align="center"><img src=".github/assets/social-preview.png" alt="dsh-plugin-dev-kit —— 教会 AI 代理开发 dsh 插件" width="100%"></p>
+
 **教会任何 AI 编码代理快速、正确地开发 [DeepSeek Harness (dsh)](https://github.com/deepseek-ai/deepseek-harness) 插件的 skill、模板与配方——不与框架较劲。**
 
 [English](README.md) | 中文

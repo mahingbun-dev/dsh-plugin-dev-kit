@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 640px; overflow: hidden; }
+  body {
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", "PingFang SC", sans-serif;
+    color: #e8eef5;
+    background:
+      radial-gradient(900px 420px at 12% -8%, rgba(36, 123, 191, .28), transparent 60%),
+      radial-gradient(700px 380px at 92% 108%, rgba(46, 160, 120, .14), transparent 60%),
+      linear-gradient(135deg, #0b1220 0%, #0e1a2b 55%, #0c1626 100%);
+    position: relative;
+  }
+  .grid {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 80px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.028) 0 1px, transparent 1px 80px);
+    -webkit-mask-image: radial-gradient(75% 90% at 45% 35%, #000 40%, transparent 100%);
+  }
+  .wrap {
+    position: relative; height: 100%;
+    padding: 66px 72px 58px;
+    display: flex; gap: 56px; align-items: center;
+  }
+  .left { flex: 1.18; min-width: 0; }
+  .eyebrow {
+    font-family: "SF Mono", Menlo, monospace;
+    font-size: 17px; letter-spacing: 4px; color: #58c4dc; font-weight: 600;
+  }
+  h1 {
+    font-family: "SF Mono", Menlo, monospace;
+    font-size: 57px; font-weight: 700; letter-spacing: -1.5px;
+    margin: 18px 0 20px; white-space: nowrap;
+  }
+  h1 .accent { color: #4aa3e0; }
+  h1 .dim { color: #7d93ab; }
+  .tagline { font-size: 30px; font-weight: 600; line-height: 1.3; color: #dbe6f2; }
+  .tagline-zh { font-size: 21px; color: #8ba0b6; margin-top: 8px; }
+  .pills { display: flex; gap: 14px; margin-top: 30px; }
+  .pill {
+    border: 1.5px solid rgba(88, 196, 220, .45); color: #9fdcef;
+    border-radius: 999px; padding: 9px 22px; font-size: 19px; font-weight: 600;
+    background: rgba(88, 196, 220, .07);
+  }
+  .meta {
+    margin-top: 26px; font-family: "SF Mono", Menlo, monospace;
+    font-size: 17px; color: #7d93ab; line-height: 1.6;
+  }
+  .meta b { color: #b9cadb; font-weight: 600; }
+  .right { flex: .92; }
+  .panel {
+    border: 1px solid rgba(255,255,255,.10); border-radius: 18px;
+    background: rgba(10, 18, 30, .55);
+    padding: 26px 28px; backdrop-filter: blur(2px);
+  }
+  .node {
+    border: 1.5px solid rgba(255,255,255,.22); border-radius: 12px;
+    padding: 13px 18px; font-size: 18px; color: #cdd9e5;
+    background: rgba(255,255,255,.03);
+  }
+  .node .small { display: block; font-size: 14px; color: #8ba0b6; margin-top: 3px; }
+  .node.skill { border-color: rgba(88, 196, 220, .55); background: rgba(88, 196, 220, .08); color: #c9ecf6; }
+  .node.done {
+    border-color: rgba(74, 200, 130, .55); background: rgba(74, 200, 130, .08); color: #c9f0da;
+  }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0; }
+  .chip {
+    border: 1px solid rgba(255,255,255,.16); border-radius: 10px;
+    padding: 9px 12px; font-family: "SF Mono", Menlo, monospace;
+    font-size: 14.5px; color: #a9bccf; background: rgba(255,255,255,.03); text-align: center;
+  }
+  .arrow {
+    display: flex; align-items: center; gap: 10px;
+    color: #63819d; font-size: 13.5px; font-family: "SF Mono", Menlo, monospace;
+    padding: 7px 0 7px 10px;
+  }
+  .arrow::before { content: "↓"; color: #4aa3e0; font-size: 16px; }
+  .footer {
+    position: absolute; left: 72px; right: 72px; bottom: 30px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: "SF Mono", Menlo, monospace; font-size: 17px; color: #6b8199;
+    border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px;
+  }
+  .footer .mit { color: #55708c; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="wrap">
+    <div class="left">
+      <div class="eyebrow">AGENT SKILL · TOOLKIT</div>
+      <h1><span class="accent">dsh</span><span class="dim">-</span>plugin-dev-kit</h1>
+      <div class="tagline">Build DeepSeek Harness plugins with any AI coding agent</div>
+      <div class="tagline-zh">教会 AI 代理快速、正确地开发 dsh 插件</div>
+      <div class="pills">
+        <div class="pill">ZCode</div>
+        <div class="pill">Claude Code</div>
+        <div class="pill">Codex</div>
+      </div>
+      <div class="meta"><b>4</b> templates&nbsp;·&nbsp;<b>8</b> references&nbsp;·&nbsp;中英双语&nbsp;·&nbsp;<b>1</b>-command install</div>
+    </div>
+    <div class="right">
+      <div class="panel">
+        <div class="node">"add a tool to my dsh agent"<span class="small">or: wrap my API · connect MCP · add a widget</span></div>
+        <div class="arrow">skill picks the path, avoids 14 red lines</div>
+        <div class="chips" style="margin-bottom:0">
+          <div class="chip">tool-plugin</div>
+          <div class="chip">ui-plugin</div>
+          <div class="chip">mcp-only</div>
+          <div class="chip">wrap-existing</div>
+        </div>
+        <div class="arrow">dsh plugin add · --dump-config verify</div>
+        <div class="node done">Working plugin in your profile<span class="small">verified through the composed config, not vibes</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>github.com/mahingbun-dev/dsh-plugin-dev-kit</div>
+    <div class="mit">MIT licensed</div>
+  </div>
+</body>
+</html>
